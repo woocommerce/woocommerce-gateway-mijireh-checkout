@@ -329,9 +329,11 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 	 */
 	public static function add_page_slurp_meta() {
 		if ( self::is_slurp_page() ) {
-			wp_enqueue_style( 'mijireh_css', plugins_url( 'assets/css/mijireh.css', plugin_dir_path( __FILE__ ) ), array(), WC_Mijireh_Checkout::VERSION );
+			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
+			wp_enqueue_style( 'mijireh_css', plugins_url( 'assets/css/mijireh' . $suffix . '.css', plugin_dir_path( __FILE__ ) ), array(), WC_Mijireh_Checkout::VERSION );
 			wp_enqueue_script( 'pusher', 'https://d3dy5gmtp8yhk7.cloudfront.net/1.11/pusher.min.js', array(), false, true );
-			wp_enqueue_script( 'page_slurp', plugins_url( 'assets/js/page-slurp.js', plugin_dir_path( __FILE__ ) ), array( 'jquery', 'pusher' ), WC_Mijireh_Checkout::VERSION, true );
+			wp_enqueue_script( 'page_slurp', plugins_url( 'assets/js/page-slurp' . $suffix . '.js', plugin_dir_path( __FILE__ ) ), array( 'jquery', 'pusher' ), WC_Mijireh_Checkout::VERSION, true );
 			wp_localize_script(
 				'page_slurp',
 				'wc_mijireh_checkout_page_slurp',

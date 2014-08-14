@@ -1,4 +1,4 @@
-/*global wc_mijireh_checkout_page_slurp */
+/*global wc_mijireh_checkout_page_slurp, ajaxurl, Pusher */
 (function ( $ ) {
 
 	$( function () {
@@ -31,7 +31,7 @@
 
 					channel.bind( 'status_changed', function ( data ) {
 
-						if ( data.level == 'info' ) {
+						if ( 'info' === data.level ) {
 							$( '#slurp_progress_bar' ).html( data.message );
 							$( '#slurp_progress_bar' ).width( data.progress + '%' );
 						}
@@ -45,7 +45,7 @@
 					});
 				}
 
-			}).error( function ( response ) {
+			}).error( function () {
 				$( '#slurp_progress' ).hide();
 				$( '#page_slurp' ).removeAttr( 'disabled' );
 
