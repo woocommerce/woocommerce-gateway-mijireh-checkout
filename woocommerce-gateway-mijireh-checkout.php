@@ -95,7 +95,7 @@ class WC_Mijireh_Checkout {
 	 * @return array          Mijireh Checkout gateway.
 	 */
 	public function add_gateway( $methods ) {
-		$methods[] = 'WC_Mijireh_Checkout_Gateway';
+		$methods[] = 'WC_Gateway_Mijireh';
 
 		return $methods;
 	}
