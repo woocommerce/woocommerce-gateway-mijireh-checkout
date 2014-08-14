@@ -90,7 +90,7 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 	 */
 	public function mijireh_notification() {
 		if ( isset( $_GET['order_number'] ) ) {
-			$this->init_mijireh();
+			self::init_mijireh();
 
 			try {
 				$mj_order    = new Mijireh_Order( esc_attr( $_GET['order_number'] ) );
@@ -287,7 +287,7 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 	 *
 	 * @return void
 	 */
-	public function init_mijireh() {
+	public static function init_mijireh() {
 		if ( ! class_exists( 'Mijireh' ) ) {
 			require_once 'libs/Mijireh.php';
 

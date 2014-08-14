@@ -87,7 +87,7 @@ class Mijireh_Model {
     return array_key_exists($key, $this->_data);
   }
 
-  public function copy_from(array $data) {
+  public function copy_from($data) {
     foreach($data as $key => $value) {
       if(array_key_exists($key, $this->_data)) {
         $this->_data[$key] = $value;
