@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Mijireh Checkout
+ * Plugin Name: WooCommerce Mijireh Checkout
  * Plugin URI: http://www.woothemes.com/
  * Description: Mijireh Checkout provides a fully PCI Compliant, secure way to collect and transmit credit card data to your payment gateway while keeping you in control of the design of your site.
  * Version: 1.0.0
