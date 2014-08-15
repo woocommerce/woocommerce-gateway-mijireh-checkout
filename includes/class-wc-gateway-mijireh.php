@@ -95,7 +95,7 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 			try {
 				$mj_order    = new Mijireh_Order( esc_attr( $_GET['order_number'] ) );
 				$wc_order_id = $mj_order->get_meta_value( 'wc_order_id' );
-				$wc_order    = get_order( absint( $wc_order_id ) );
+				$wc_order    = wc_get_order( absint( $wc_order_id ) );
 
 				// Mark order complete.
 				$wc_order->payment_complete();
@@ -174,7 +174,7 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 		$this->init_mijireh();
 
 		$mj_order = new Mijireh_Order();
-		$wc_order = get_order( $order_id );
+		$wc_order = wc_get_order( $order_id );
 
 		// Avoid rounding issues altogether by sending the order as one lump.
 		if ( 'yes' == get_option( 'woocommerce_prices_include_tax' ) ) {
