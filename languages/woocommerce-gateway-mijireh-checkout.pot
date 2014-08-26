@@ -1,0 +1,179 @@
+# Copyright (C) 2014 WooThemes
+# This file is distributed under the same license as the WooCommerce Mijireh Checkout package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Mijireh Checkout 1.0.0\n"
+"Report-Msgid-Bugs-To: "
+"https://github.com/woothemes/woocommerce-gateway-mijireh-checkout/issues\n"
+"POT-Creation-Date: 2014-08-26 18:49:40+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 0.4.7\n"
+
+#: includes/class-wc-gateway-mijireh.php:34
+#: includes/views/html-admin-options.php:12
+#: includes/views/html-admin-options.php:17
+msgid "Mijireh Checkout"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:69
+msgid "Mijireh Secure Checkout"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:76
+msgid "Checkout"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:110
+#: includes/class-wc-gateway-mijireh.php:281
+msgid "Mijireh error:"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:127
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:129
+msgid "Enable Mijireh Checkout"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:133
+msgid "Access Key"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:135
+msgid "The Mijireh access key for your store."
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:140
+msgid "Title"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:142
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:143
+msgid "Credit Card"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:147
+msgid "Description"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:149
+msgid "Pay securely with your credit card."
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:150
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:193
+msgid "Order %s"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:341
+msgid "Starting up"
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:342
+msgid ""
+"Your PHP configuration does not allow for Page Slurp from within WordPress. "
+"Please log into your Mijireh account and Slurp the page by pasting in the "
+"URL to this page as shown below."
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:343
+msgid ""
+"Please set this page to be publicly accessible during the Slurp then set it "
+"back to private after the Slurp is complete."
+msgstr ""
+
+#: includes/class-wc-gateway-mijireh.php:344
+msgid "Please make sure your Mijireh access key is correct"
+msgstr ""
+
+#: includes/views/html-admin-options.php:11
+msgid "Get started with Mijireh Checkout"
+msgstr ""
+
+#: includes/views/html-admin-options.php:12
+msgid ""
+"provides a fully PCI Compliant, secure way to collect and transmit credit "
+"card data to your payment gateway while keeping you in control of the "
+"design of your site. Mijireh supports a wide variety of payment gateways: "
+"Stripe, Authorize.net, PayPal, eWay, SagePay, Braintree, PayLeap, and more."
+msgstr ""
+
+#: includes/views/html-admin-options.php:14
+msgid "Join for free"
+msgstr ""
+
+#: includes/views/html-admin-options.php:14
+msgid "Learn more about WooCommerce and Mijireh"
+msgstr ""
+
+#: includes/views/html-admin-options.php:17
+msgid ""
+"provides a fully PCI Compliant, secure way to collect and transmit credit "
+"card data to your payment gateway while keeping you in control of the "
+"design of your site."
+msgstr ""
+
+#: includes/views/html-slurp-meta-box.php:8
+msgid "Slurp your custom checkout page!"
+msgstr ""
+
+#: includes/views/html-slurp-meta-box.php:9
+msgid ""
+"Get the page designed just how you want and when you're ready, click the "
+"button below and slurp it right up."
+msgstr ""
+
+#: includes/views/html-slurp-meta-box.php:11
+msgid "Slurping..."
+msgstr ""
+
+#: includes/views/html-slurp-meta-box.php:13
+msgid "Slurp This Page!"
+msgstr ""
+
+#: includes/views/html-slurp-meta-box.php:13
+msgid "Preview Checkout Page"
+msgstr ""
+
+#: woocommerce-gateway-mijireh-checkout.php:109
+msgid "Mijireh Checkout depends on the %s or later to work!"
+msgstr ""
+
+#: woocommerce-gateway-mijireh-checkout.php:109
+msgid "WooCommerce 2.2"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WooCommerce Mijireh Checkout"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.woothemes.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Mijireh Checkout provides a fully PCI Compliant, secure way to collect and "
+"transmit credit card data to your payment gateway while keeping you in "
+"control of the design of your site."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WooThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://woothemes.com"
+msgstr ""
