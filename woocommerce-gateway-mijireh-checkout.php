@@ -43,7 +43,7 @@ class WC_Mijireh_Checkout {
 		add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
 
 		// Checks with WooCommerce is installed.
-		if ( class_exists( 'WC_Payment_Gateway' ) ) {
+		if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.2', '>=' ) ) {
 			$this->includes();
 
 			add_filter( 'woocommerce_payment_gateways', array( $this, 'add_gateway' ) );
@@ -106,7 +106,7 @@ class WC_Mijireh_Checkout {
 	 * @return string
 	 */
 	public function woocommerce_missing_notice() {
-		echo '<div class="error"><p>' . sprintf( __( 'Mijireh Checkout depends on the last version of %s to work!', 'woocommerce-gateway-mijireh-checkout' ), '<a href="http://wordpress.org/extend/plugins/woocommerce/">' . __( 'WooCommerce', 'woocommerce-gateway-mijireh-checkout' ) . '</a>' ) . '</p></div>';
+		echo '<div class="error"><p>' . sprintf( __( 'Mijireh Checkout depends on the %s or later to work!', 'woocommerce-gateway-mijireh-checkout' ), '<a href="http://wordpress.org/extend/plugins/woocommerce/">' . __( 'WooCommerce 2.2', 'woocommerce-gateway-mijireh-checkout' ) . '</a>' ) . '</p></div>';
 	}
 }
 
