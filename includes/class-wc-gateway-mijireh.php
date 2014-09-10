@@ -171,7 +171,7 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 	 */
 	public function process_payment( $order_id ) {
 
-		$this->init_mijireh();
+		self::init_mijireh();
 
 		$mj_order = new Mijireh_Order();
 		$wc_order = wc_get_order( $order_id );
