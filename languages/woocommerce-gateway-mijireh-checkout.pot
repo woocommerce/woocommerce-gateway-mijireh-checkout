@@ -1,18 +1,17 @@
-# Copyright (C) 2014 WooThemes
+# Copyright (C) 2015 WooCommerce Mijireh Checkout
 # This file is distributed under the same license as the WooCommerce Mijireh Checkout package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Mijireh Checkout 1.0.0\n"
-"Report-Msgid-Bugs-To: "
-"https://github.com/woothemes/woocommerce-gateway-mijireh-checkout/issues\n"
-"POT-Creation-Date: 2014-08-26 18:49:40+00:00\n"
+"Project-Id-Version: WooCommerce Mijireh Checkout 1.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/woocommerce-"
+"gateway-mijireh-checkout\n"
+"POT-Creation-Date: 2015-02-12 13:53:51+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
-"X-Generator: grunt-wp-i18n 0.4.7\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: includes/class-wc-gateway-mijireh.php:34
 #: includes/views/html-admin-options.php:12
@@ -105,9 +104,9 @@ msgstr ""
 #: includes/views/html-admin-options.php:12
 msgid ""
 "provides a fully PCI Compliant, secure way to collect and transmit credit "
-"card data to your payment gateway while keeping you in control of the "
-"design of your site. Mijireh supports a wide variety of payment gateways: "
-"Stripe, Authorize.net, PayPal, eWay, SagePay, Braintree, PayLeap, and more."
+"card data to your payment gateway while keeping you in control of the design "
+"of your site. Mijireh supports a wide variety of payment gateways: Stripe, "
+"Authorize.net, PayPal, eWay, SagePay, Braintree, PayLeap, and more."
 msgstr ""
 
 #: includes/views/html-admin-options.php:14
@@ -121,8 +120,8 @@ msgstr ""
 #: includes/views/html-admin-options.php:17
 msgid ""
 "provides a fully PCI Compliant, secure way to collect and transmit credit "
-"card data to your payment gateway while keeping you in control of the "
-"design of your site."
+"card data to your payment gateway while keeping you in control of the design "
+"of your site."
 msgstr ""
 
 #: includes/views/html-slurp-meta-box.php:8
@@ -147,11 +146,11 @@ msgstr ""
 msgid "Preview Checkout Page"
 msgstr ""
 
-#: woocommerce-gateway-mijireh-checkout.php:109
+#: woocommerce-gateway-mijireh-checkout.php:113
 msgid "Mijireh Checkout depends on the %s or later to work!"
 msgstr ""
 
-#: woocommerce-gateway-mijireh-checkout.php:109
+#: woocommerce-gateway-mijireh-checkout.php:113
 msgid "WooCommerce 2.2"
 msgstr ""
 

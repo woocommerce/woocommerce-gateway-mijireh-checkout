@@ -2,8 +2,8 @@
 Contributors: woothemes, mikejolley, claudiosanches
 Tags: woocommerce, shortcodes
 Requires at least: 3.9
-Tested up to: 4.0
-Stable tag: 1.0.0
+Tested up to: 4.1
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,12 +55,18 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 == Changelog ==
 
+= 1.0.1 - 2015/02/12 =
+
+* Fixed the "Slurp your custom checkout page" meta box in WooCommerce 2.3.
+* Added support for WooCommerce 2.3.
+
 = 1.0.0 =
 
 * Initial version.
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.0.1 =
 
-* Initial version.
+* Fixed the "Slurp your custom checkout page" meta box in WooCommerce 2.3.
+* Added support for WooCommerce 2.3.
