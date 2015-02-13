@@ -21,13 +21,10 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 	 *
 	 * @var string
 	 */
-	var $access_key;
+	public $access_key;
 
 	/**
 	 * Constructor for the gateway.
-	 *
-	 * @access public
-	 * @return void
 	 */
 	public function __construct() {
 		$this->id           = 'mijireh_checkout';
@@ -57,8 +54,6 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 
 	/**
 	 * Install slurp page.
-	 *
-	 * @return void
 	 */
 	public function install_slurp_page() {
 		$slurp_page_installed = get_option( 'slurp_page_installed', false );
@@ -85,8 +80,6 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 
 	/**
 	 * Notification.
-	 *
-	 * @return void
 	 */
 	public function mijireh_notification() {
 		if ( isset( $_GET['order_number'] ) ) {
@@ -118,8 +111,6 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 
 	/**
 	 * Initialise Gateway Settings Form Fields
-	 *
-	 * @return void
 	 */
 	public function init_form_fields() {
 		$this->form_fields = array(
@@ -284,8 +275,6 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 
 	/**
 	 * Init Mijireh.
-	 *
-	 * @return void
 	 */
 	public static function init_mijireh() {
 		if ( ! class_exists( 'Mijireh' ) ) {
@@ -324,8 +313,6 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 
 	/**
 	 * Add page slurp meta.
-	 *
-	 * @return void
 	 */
 	public static function add_page_slurp_meta() {
 		if ( self::is_slurp_page() ) {
