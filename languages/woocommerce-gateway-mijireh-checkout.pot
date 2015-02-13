@@ -1,99 +1,100 @@
-# Copyright (C) 2015 WooCommerce Mijireh Checkout
+# Copyright (C) 2015 WooThemes
 # This file is distributed under the same license as the WooCommerce Mijireh Checkout package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Mijireh Checkout 1.0.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/woocommerce-"
-"gateway-mijireh-checkout\n"
-"POT-Creation-Date: 2015-02-12 13:53:51+00:00\n"
+"Project-Id-Version: WooCommerce Mijireh Checkout 1.0.2\n"
+"Report-Msgid-Bugs-To: "
+"https://github.com/woothemes/woocommerce-gateway-mijireh-checkout/issues\n"
+"POT-Creation-Date: 2015-02-13 17:32:40+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
 
-#: includes/class-wc-gateway-mijireh.php:34
+#: includes/class-wc-gateway-mijireh.php:31
 #: includes/views/html-admin-options.php:12
 #: includes/views/html-admin-options.php:17
 msgid "Mijireh Checkout"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:69
+#: includes/class-wc-gateway-mijireh.php:64
 msgid "Mijireh Secure Checkout"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:76
+#: includes/class-wc-gateway-mijireh.php:71
 msgid "Checkout"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:110
-#: includes/class-wc-gateway-mijireh.php:281
+#: includes/class-wc-gateway-mijireh.php:103
+#: includes/class-wc-gateway-mijireh.php:280
 msgid "Mijireh error:"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:127
+#: includes/class-wc-gateway-mijireh.php:118
 msgid "Enable/Disable"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:129
+#: includes/class-wc-gateway-mijireh.php:120
 msgid "Enable Mijireh Checkout"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:133
+#: includes/class-wc-gateway-mijireh.php:124
 msgid "Access Key"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:135
+#: includes/class-wc-gateway-mijireh.php:126
 msgid "The Mijireh access key for your store."
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:140
+#: includes/class-wc-gateway-mijireh.php:131
 msgid "Title"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:142
+#: includes/class-wc-gateway-mijireh.php:133
 msgid "This controls the title which the user sees during checkout."
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:143
+#: includes/class-wc-gateway-mijireh.php:134
 msgid "Credit Card"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:147
+#: includes/class-wc-gateway-mijireh.php:138
 msgid "Description"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:149
+#: includes/class-wc-gateway-mijireh.php:140
 msgid "Pay securely with your credit card."
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:150
+#: includes/class-wc-gateway-mijireh.php:141
 msgid "This controls the description which the user sees during checkout."
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:193
+#: includes/class-wc-gateway-mijireh.php:190
 msgid "Order %s"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:341
+#: includes/class-wc-gateway-mijireh.php:336
 msgid "Starting up"
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:342
+#: includes/class-wc-gateway-mijireh.php:337
 msgid ""
 "Your PHP configuration does not allow for Page Slurp from within WordPress. "
 "Please log into your Mijireh account and Slurp the page by pasting in the "
 "URL to this page as shown below."
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:343
+#: includes/class-wc-gateway-mijireh.php:338
 msgid ""
 "Please set this page to be publicly accessible during the Slurp then set it "
 "back to private after the Slurp is complete."
 msgstr ""
 
-#: includes/class-wc-gateway-mijireh.php:344
+#: includes/class-wc-gateway-mijireh.php:339
 msgid "Please make sure your Mijireh access key is correct"
 msgstr ""
 
@@ -104,9 +105,9 @@ msgstr ""
 #: includes/views/html-admin-options.php:12
 msgid ""
 "provides a fully PCI Compliant, secure way to collect and transmit credit "
-"card data to your payment gateway while keeping you in control of the design "
-"of your site. Mijireh supports a wide variety of payment gateways: Stripe, "
-"Authorize.net, PayPal, eWay, SagePay, Braintree, PayLeap, and more."
+"card data to your payment gateway while keeping you in control of the "
+"design of your site. Mijireh supports a wide variety of payment gateways: "
+"Stripe, Authorize.net, PayPal, eWay, SagePay, Braintree, PayLeap, and more."
 msgstr ""
 
 #: includes/views/html-admin-options.php:14
@@ -120,8 +121,8 @@ msgstr ""
 #: includes/views/html-admin-options.php:17
 msgid ""
 "provides a fully PCI Compliant, secure way to collect and transmit credit "
-"card data to your payment gateway while keeping you in control of the design "
-"of your site."
+"card data to your payment gateway while keeping you in control of the "
+"design of your site."
 msgstr ""
 
 #: includes/views/html-slurp-meta-box.php:8
