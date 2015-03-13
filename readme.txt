@@ -74,8 +74,6 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 == Upgrade Notice ==
 
-= 1.0.2 =
+= 1.0.3 =
 
-* Fixed the "Slurp your custom checkout page" meta box in WooCommerce 2.3.
-* Added support for WooCommerce 2.3.
-* Fixed an error when use coupons and the "Prices Entered With Tax" option as "Yes, I will enter prices inclusive of tax".
+* Fixed slurp page ajax request.
