@@ -50,6 +50,7 @@ class WC_Mijireh_Checkout {
 
 			if ( version_compare( WC_VERSION, '2.3', '>=' ) && is_admin() ) {
 				add_action( 'add_meta_boxes', array( 'WC_Gateway_Mijireh', 'add_page_slurp_meta' ) );
+				add_action( 'wp_ajax_page_slurp', array( 'WC_Gateway_Mijireh', 'page_slurp' ) );
 			}
 		} else {
 			add_action( 'admin_notices', array( $this, 'woocommerce_missing_notice' ) );
@@ -72,8 +73,6 @@ class WC_Mijireh_Checkout {
 
 	/**
 	 * Load the plugin text domain for translation.
-	 *
-	 * @return void
 	 */
 	public function load_plugin_textdomain() {
 		$locale = apply_filters( 'plugin_locale', get_locale(), 'woocommerce-gateway-mijireh-checkout' );
@@ -84,8 +83,6 @@ class WC_Mijireh_Checkout {
 
 	/**
 	 * Includes.
-	 *
-	 * @return void
 	 */
 	private function includes() {
 		include_once 'includes/class-wc-gateway-mijireh.php';
