@@ -78,6 +78,6 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 == Upgrade Notice ==
 
-= 1.0.3 =
+= 1.0.4 =
 
-* Fixed slurp page ajax request.
+* Added filter `woocommerce_mijireh_checkout_consolidated_char_limit` to circumvent issues with certain gateways with character limits
