@@ -3,7 +3,7 @@ Contributors: woothemes, mikejolley, claudiosanches
 Tags: woocommerce, shortcodes
 Requires at least: 3.9
 Tested up to: 4.1.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,10 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 2. Mijireh Checkout payment option in checkout page
 
 == Changelog ==
+
+= 1.0.4 - 2015/04/14 =
+
+* Added filter `woocommerce_mijireh_checkout_consolidated_char_limit` to circumvent issues with certain gateways with character limits
 
 = 1.0.3 - 2015/03/13 =
 
