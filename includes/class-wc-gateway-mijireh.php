@@ -187,7 +187,9 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 				$discount = $wc_order->get_order_discount();
 			}
 
-			$mj_order->add_item( sprintf( __( 'Order %s' , 'woocommerce-gateway-mijireh-checkout' ), $wc_order->get_order_number() ) . ' - ' . implode( ', ', $item_names ), number_format( $wc_order->get_total() - round( $wc_order->get_total_shipping() + $wc_order->get_shipping_tax(), 2 ) + $discount, 2, '.', '' ), 1 );
+			$item_desc = apply_filters( 'woocommerce_mijireh_checkout_consolidated_char_limit', sprintf( __( 'Order %s' , 'woocommerce-gateway-mijireh-checkout' ), $wc_order->get_order_number() ) . ' - ' . implode( ', ', $item_names ) );
+			
+			$mj_order->add_item( $item_desc, number_format( $wc_order->get_total() - round( $wc_order->get_total_shipping() + $wc_order->get_shipping_tax(), 2 ) + $discount, 2, '.', '' ), 1 );
 
 			if ( ( $wc_order->get_total_shipping() + $wc_order->get_shipping_tax() ) > 0 ) {
 				$mj_order->shipping = number_format( $wc_order->get_total_shipping() + $wc_order->get_shipping_tax(), 2, '.', '' );
