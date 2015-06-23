@@ -182,9 +182,9 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 			}
 
 			if ( version_compare( WC_VERSION, '2.3', '>=' ) ) {
-				$discount = $wc_order->get_total_discount();
+				$mj_order->discount = $discount = number_format( $wc_order->get_total_discount(), 2, '.', '' );
 			} else {
-				$discount = $wc_order->get_order_discount();
+				$mj_order->discount = $discount = number_format( $wc_order->get_order_discount(), 2, '.', '' );
 			}
 
 			// this filter is added to circumvent character limit issues with certain gateways causing payment failure
@@ -197,7 +197,6 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 			}
 
 			$mj_order->show_tax = false;
-			$mj_order->discount = number_format( $wc_order->get_total_discount(), 2, '.', '' );
 
 		// No issues when prices exclude tax.
 		} else {
@@ -216,9 +215,9 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 				$mj_order->add_item( $item['name'], number_format( $item['line_total'], 2, '.', ',' ), 1, '' );
 			}
 
-			$mj_order->shipping = round( $wc_order->get_total_shipping(), 2 );
-			$mj_order->tax      = $wc_order->get_total_tax();
-			$mj_order->discount = $wc_order->get_total_discount();
+			$mj_order->shipping = number_format( $wc_order->get_total_shipping(), 2, '.', '' );
+			$mj_order->tax      = number_format( $wc_order->get_total_tax(), 2, '.', '' );
+			$mj_order->discount = number_format( $wc_order->get_total_discount(), 2, '.', '' );
 		}
 
 		// set order totals
