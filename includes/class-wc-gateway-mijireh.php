@@ -271,6 +271,8 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 		// Identify woocommerce
 		$mj_order->partner_id     = 'woo';
 
+		$mj_order = apply_filters( 'woocommerce_mijireh_checkout_mj_order', $mj_order );
+
 		try {
 			$mj_order->create();
 			$result = array(
