@@ -1,9 +1,9 @@
 === WooCommerce Mijireh Checkout ===
 Contributors: woothemes, mikejolley, claudiosanches
 Tags: woocommerce, shortcodes
-Requires at least: 3.9
-Tested up to: 4.1.1
-Stable tag: 1.0.4
+Requires at least: 4.0
+Tested up to: 4.2
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,11 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 == Changelog ==
 
+= 1.0.5 - 2015/06/23 =
+
+* Fixed decimal values of taxes, discounts and shipping.
+* Added `woocommerce_mijireh_checkout_mj_order` filter.
+
 = 1.0.4 - 2015/04/14 =
 
 * Added filter `woocommerce_mijireh_checkout_consolidated_char_limit` to circumvent issues with certain gateways with character limits
@@ -78,6 +83,7 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 == Upgrade Notice ==
 
-= 1.0.4 =
+= 1.0.5 =
 
-* Added filter `woocommerce_mijireh_checkout_consolidated_char_limit` to circumvent issues with certain gateways with character limits
+* Fixed decimal values of taxes, discounts and shipping.
+* Added `woocommerce_mijireh_checkout_mj_order` filter.
