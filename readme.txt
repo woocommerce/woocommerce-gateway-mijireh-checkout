@@ -3,7 +3,7 @@ Contributors: woothemes, mikejolley, claudiosanches
 Tags: woocommerce, shortcodes
 Requires at least: 4.0
 Tested up to: 4.2
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,10 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 == Changelog ==
 
+= 1.0.6 - 2015/06/25 =
+
+* Added a new method to check calculated order total and send as lump sum if totals don't match.
+
 = 1.0.5 - 2015/06/23 =
 
 * Fixed decimal values of taxes, discounts and shipping.
@@ -83,7 +87,6 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 == Upgrade Notice ==
 
-= 1.0.5 =
+= 1.0.6 =
 
-* Fixed decimal values of taxes, discounts and shipping.
-* Added `woocommerce_mijireh_checkout_mj_order` filter.
+* Added a new method to check calculated order total and send as lump sum if totals don't match.
