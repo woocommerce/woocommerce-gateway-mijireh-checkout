@@ -166,10 +166,41 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 
 		$mj_order = new Mijireh_Order();
 		$wc_order = wc_get_order( $order_id );
+		$send_as_lump = false;
 
 		// Avoid rounding issues altogether by sending the order as one lump.
-		if ( 'yes' == get_option( 'woocommerce_prices_include_tax' ) ) {
+		if ( 'yes' !== get_option( 'woocommerce_prices_include_tax' ) ) {
+			$calculated_total = 0;
+			$items = $wc_order->get_items();
 
+			foreach ( $items as $item ) {
+				$product = $wc_order->get_product_from_item( $item );
+				$mj_order->add_item( $item['name'], $wc_order->get_item_subtotal( $item, false, true ), $item['qty'], $product->get_sku() );
+				$calculated_total += $wc_order->get_item_subtotal( $item, false ) * $item['qty'];
+			}
+
+			// Handle fees
+			$items = $wc_order->get_fees();
+
+			foreach ( $items as $item ) {
+				$mj_order->add_item( $item['name'], number_format( $item['line_total'], 2, '.', ',' ), 1, '' );
+				$calculated_total += $item['line_total'];
+			}
+
+			// Check for mismatched totals
+			if ( wc_format_decimal( $calculated_total + $wc_order->get_total_tax() + round( $wc_order->get_total_shipping(), 2 ) - round( $wc_order->get_total_discount(), 2 ), 2 ) != wc_format_decimal( $wc_order->get_total(), 2 ) ) {
+				$send_as_lump = true;
+			} else {
+				$mj_order->shipping = number_format( $wc_order->get_total_shipping(), 2, '.', '' );
+				$mj_order->tax      = number_format( $wc_order->get_total_tax(), 2, '.', '' );
+				$mj_order->discount = number_format( $wc_order->get_total_discount(), 2, '.', '' );
+				$mj_order->total    = number_format( $wc_order->get_total(), 2, '.', '' );
+			}
+		} else {
+			$send_as_lump = true;
+		}
+
+		if ( true === $send_as_lump ) {
 			// Don't pass items - Pass 1 item for the order items overall.
 			$item_names = array();
 
@@ -197,31 +228,8 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 			}
 
 			$mj_order->show_tax = false;
-
-		// No issues when prices exclude tax.
-		} else {
-			// add items to order.
-			$items = $wc_order->get_items();
-
-			foreach ( $items as $item ) {
-				$product = $wc_order->get_product_from_item( $item );
-				$mj_order->add_item( $item['name'], $wc_order->get_item_subtotal( $item, false, true ), $item['qty'], $product->get_sku() );
-			}
-
-			// Handle fees
-			$items = $wc_order->get_fees();
-
-			foreach ( $items as $item ) {
-				$mj_order->add_item( $item['name'], number_format( $item['line_total'], 2, '.', ',' ), 1, '' );
-			}
-
-			$mj_order->shipping = number_format( $wc_order->get_total_shipping(), 2, '.', '' );
-			$mj_order->tax      = number_format( $wc_order->get_total_tax(), 2, '.', '' );
-			$mj_order->discount = number_format( $wc_order->get_total_discount(), 2, '.', '' );
+			$mj_order->total = number_format( $wc_order->get_total(), 2, '.', '' );
 		}
-
-		// set order totals
-		$mj_order->total = $wc_order->get_total();
 
 		// add billing address to order
 		$billing                  = new Mijireh_Address();
