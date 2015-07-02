@@ -201,6 +201,10 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 		}
 
 		if ( true === $send_as_lump ) {
+			// Reset order items and tax  in case we went through the block above
+			$mj_order->clear_items();
+			$mj_order->tax = 0;
+
 			// Don't pass items - Pass 1 item for the order items overall.
 			$item_names = array();
 
