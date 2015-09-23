@@ -86,12 +86,13 @@ class WC_Gateway_Mijireh extends WC_Payment_Gateway {
 			self::init_mijireh();
 
 			try {
-				$mj_order    = new Mijireh_Order( esc_attr( $_GET['order_number'] ) );
+				$mj_order_id = esc_attr( $_GET['order_number'] );
+				$mj_order    = new Mijireh_Order( $mj_order_id );
 				$wc_order_id = $mj_order->get_meta_value( 'wc_order_id' );
 				$wc_order    = wc_get_order( absint( $wc_order_id ) );
 
 				// Mark order complete.
-				$wc_order->payment_complete();
+				$wc_order->payment_complete( $mj_order_id );
 
 				// Empty cart and clear session.
 				WC()->cart->empty_cart();
