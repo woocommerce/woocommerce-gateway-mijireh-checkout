@@ -2,8 +2,8 @@
 Contributors: woothemes, mikejolley, claudiosanches
 Tags: woocommerce, shortcodes
 Requires at least: 4.0
-Tested up to: 4.2
-Stable tag: 1.0.7
+Tested up to: 4.3
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,10 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 == Changelog ==
 
+= 1.0.8 - 2015/09/23 =
+
+* Added method to save the transaction ID.
+
 = 1.0.7 - 2015/07/02 =
 
 * Fixed the total and order items if running through the "send as lump" code.
@@ -91,6 +95,6 @@ You can contribute to the source code in our [GitHub](https://github.com/woothem
 
 == Upgrade Notice ==
 
-= 1.0.7 =
+= 1.0.8 =
 
-* Fixed the total and order items if running through the "send as lump" code.
+* Added method to save the transaction ID.
